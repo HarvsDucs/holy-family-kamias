@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #173a5e;
+  --color-navy-deep: #0f2a45;
+  --color-navy-light: #2a5680;
+  --color-gold: #f4b41a;
+  --color-gold-soft: #f8cf63;
+  --color-teal: #1b9e9e;
+  --color-skyblue: #6ba8d6;
+  --color-cream: #faf6ee;
+  --color-parchment: #f5ecdc;
+
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-serif);
+  letter-spacing: 0.01em;
+}
+
+/* Decorative gold rule */
+.gold-rule {
+  height: 3px;
+  width: 72px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+/* Subtle fade-in on scroll */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: fadeUp 0.8s ease both;
+}
+
+/* Cross pattern background accent */
+.cross-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(244, 180, 26, 0.12) 1px, transparent 0);
+  background-size: 28px 28px;
+}
