@@ -24,36 +24,44 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
-        <a href="#home" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <Image
-            src="/assets/main-pic.png"
-            alt="Holy Family Parish Kamias logo"
-            width={48}
-            height={48}
-            className="h-11 w-11 object-contain"
-            priority
-          />
+        <a href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-cream shadow-sm ring-1 ring-navy/10">
+            <Image
+              src="/assets/emblem.png"
+              alt="Holy Family Parish Kamias logo"
+              width={44}
+              height={44}
+              className="h-8 w-8 object-contain"
+              priority
+            />
+          </span>
           <span className="flex flex-col leading-none">
             <span
               className={`font-display text-lg font-bold transition-colors ${
-                scrolled ? "text-navy" : "text-navy"
+                scrolled ? "text-navy" : "text-cream"
               }`}
             >
               {parish.name}
             </span>
-            <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-teal">
+            <span
+              className={`text-[11px] font-medium uppercase tracking-[0.2em] transition-colors ${
+                scrolled ? "text-teal" : "text-gold-soft"
+              }`}
+            >
               {parish.location}
             </span>
           </span>
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-x-5 gap-y-2 lg:flex">
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-navy/80 transition-colors hover:text-gold"
+              className={`text-sm font-medium transition-colors hover:text-gold ${
+                scrolled ? "text-navy/80" : "text-cream/90"
+              }`}
             >
               {item.label}
             </a>
@@ -63,7 +71,9 @@ export default function Header() {
         {/* Mobile toggle */}
         <button
           aria-label="Toggle menu"
-          className="flex h-10 w-10 items-center justify-center rounded-md text-navy md:hidden"
+          className={`flex h-10 w-10 items-center justify-center rounded-md transition-colors lg:hidden ${
+            scrolled ? "text-navy" : "text-cream"
+          }`}
           onClick={() => setOpen((v) => !v)}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -78,7 +88,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="border-t border-navy/10 bg-cream/98 px-5 py-3 md:hidden">
+        <nav className="border-t border-navy/10 bg-cream/98 px-5 py-3 lg:hidden">
           {nav.map((item) => (
             <a
               key={item.href}

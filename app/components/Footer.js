@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-cream/95">
                 <Image
-                  src="/assets/main-pic.png"
+                  src="/assets/emblem.png"
                   alt="Holy Family Parish Kamias logo"
                   width={40}
                   height={40}

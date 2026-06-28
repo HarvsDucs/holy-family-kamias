@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { pillars } from "../data";
+
 export default function About() {
   return (
     <section id="about" className="relative bg-cream py-24">
@@ -27,34 +30,28 @@ export default function About() {
         </div>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-3">
-          {[
-            {
-              title: "Faith",
-              text: "Rooted in the Eucharist and the teachings of the Catholic Church.",
-            },
-            {
-              title: "Family",
-              text: "A welcoming community that journeys together in every season of life.",
-            },
-            {
-              title: "Service",
-              text: "Reaching out in charity to our neighbors and those in need.",
-            },
-          ].map((pillar) => (
-            <div
-              key={pillar.title}
-              className="rounded-2xl border border-navy/10 bg-white/60 p-8 text-center shadow-sm transition-shadow hover:shadow-md"
+          {pillars.map((pillar) => (
+            <Link
+              key={pillar.slug}
+              href={`/pillars/${pillar.slug}`}
+              className="group flex flex-col rounded-2xl border border-navy/10 bg-white/60 p-8 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-gold/30 hover:shadow-md"
             >
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/15">
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/15 transition-colors group-hover:bg-gold/25">
                 <span className="h-3 w-3 rounded-full bg-gold" />
               </div>
               <h3 className="font-display text-2xl font-semibold text-navy">
                 {pillar.title}
               </h3>
-              <p className="mt-3 text-sm font-light leading-relaxed text-navy/70">
-                {pillar.text}
+              <p className="mt-3 flex-1 text-sm font-light leading-relaxed text-navy/70">
+                {pillar.card}
               </p>
-            </div>
+              <span className="mt-5 inline-flex items-center justify-center gap-1.5 text-sm font-semibold uppercase tracking-wider text-teal transition-colors group-hover:text-gold">
+                Learn more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-0.5">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </Link>
           ))}
         </div>
       </div>

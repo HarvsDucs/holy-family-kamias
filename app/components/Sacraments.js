@@ -1,30 +1,10 @@
-import { sacraments } from "../data";
-
-const icons = {
-  dove: (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M16 7c3 0 5 2 5 5 0 0-2-1-4-1-3 0-5 2-7 4-3 3-7 3-7 3s2-4 4-7c-1-1-2-3-2-5 0 0 3 1 5 3 1-1 3-2 6-2" />
-      <circle cx="17" cy="6" r="0.6" fill="currentColor" />
-    </svg>
-  ),
-  water: (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11Z" />
-    </svg>
-  ),
-  rings: (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="9" cy="14" r="6" />
-      <circle cx="16" cy="14" r="6" />
-      <path d="M12 4l2 3h-4l2-3Z" />
-    </svg>
-  ),
-};
+import Link from "next/link";
+import { sevenSacraments } from "../data";
 
 export default function Sacraments() {
   return (
     <section id="sacraments" className="relative bg-parchment py-24">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-3xl px-6">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-teal">
             Grace &amp; Sacraments
@@ -39,27 +19,46 @@ export default function Sacraments() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
-          {sacraments.map((s) => (
-            <div
-              key={s.title}
-              className="group flex flex-col rounded-2xl bg-white p-8 shadow-sm ring-1 ring-navy/5 transition-all hover:-translate-y-1 hover:shadow-lg"
-            >
-              <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-navy text-gold transition-colors group-hover:bg-gold group-hover:text-navy-deep">
-                {icons[s.icon]}
-              </span>
-              <h3 className="font-display text-2xl font-semibold text-navy">
+        <Link
+          href="/sacraments"
+          className="group mt-12 flex flex-col items-center rounded-3xl bg-white p-8 text-center shadow-sm ring-1 ring-navy/5 transition-all hover:-translate-y-1 hover:shadow-lg sm:p-12"
+        >
+          <span className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-navy text-gold transition-colors group-hover:bg-gold group-hover:text-navy-deep">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 3v18M5 8h14M7 21h10" />
+              <path d="M9 8c0 2 1 3 3 3s3-1 3-3" />
+            </svg>
+          </span>
+          <h3 className="font-display text-3xl font-semibold text-navy">
+            The Seven Sacraments
+          </h3>
+          <p className="mt-3 max-w-xl text-sm font-light leading-relaxed text-navy/70">
+            From Baptism to Matrimony, discover the seven sacraments of the
+            Church and how to receive them in our parish.
+          </p>
+
+          <div className="mt-6 flex flex-wrap justify-center gap-2">
+            {sevenSacraments.map((s) => (
+              <span
+                key={s.title}
+                className={`rounded-full px-4 py-1.5 text-xs font-medium ${
+                  s.main
+                    ? "bg-gold/20 text-navy ring-1 ring-gold/40"
+                    : "bg-parchment text-navy/70"
+                }`}
+              >
                 {s.title}
-              </h3>
-              <p className="mt-2 text-sm font-semibold uppercase tracking-wide text-teal">
-                {s.schedule}
-              </p>
-              <p className="mt-3 text-sm font-light leading-relaxed text-navy/70">
-                {s.detail}
-              </p>
-            </div>
-          ))}
-        </div>
+              </span>
+            ))}
+          </div>
+
+          <span className="mt-8 inline-flex items-center gap-1.5 rounded-full bg-gold px-7 py-3 text-sm font-semibold uppercase tracking-wider text-navy-deep shadow transition-all group-hover:bg-gold-soft">
+            Explore the Sacraments
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-0.5">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </span>
+        </Link>
       </div>
     </section>
   );

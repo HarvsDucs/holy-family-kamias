@@ -59,3 +59,23 @@ body {
   background-image: radial-gradient(circle at 1px 1px, rgba(244, 180, 26, 0.12) 1px, transparent 0);
   background-size: 28px 28px;
 }
+
+/* Custom horizontal scrollbar — manual gallery */
+.scroller-custom {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) rgba(23, 58, 94, 0.1);
+}
+.scroller-custom::-webkit-scrollbar {
+  height: 10px;
+}
+.scroller-custom::-webkit-scrollbar-track {
+  background: rgba(23, 58, 94, 0.08);
+  border-radius: 999px;
+}
+.scroller-custom::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 999px;
+}
+.scroller-custom::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-soft);
+}
