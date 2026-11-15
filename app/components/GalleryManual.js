@@ -26,8 +26,7 @@ export default function GalleryManual() {
             </h2>
             <p className="mt-3 max-w-xl text-base font-light leading-relaxed text-navy/70">
               A look at the life of our community — our church, celebrations, and
-              ministries. More photos coming soon; swipe or use the arrows to
-              explore.
+              ministries. Swipe or use the arrows to explore.
             </p>
           </div>
 

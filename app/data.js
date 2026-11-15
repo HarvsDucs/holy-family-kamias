@@ -34,14 +34,18 @@ export const saturdayMass = {
 // Horizontally scrolling parish gallery (placeholders for future photos).
 // Add an `image` field (e.g. "/assets/gallery-mass.jpeg") to show a real photo.
 export const galleryPhotos = [
-  { caption: "The Parish Church" },
-  { caption: "Sunday Mass" },
-  { caption: "Feast Day Celebration" },
-  { caption: "Baptisms & Weddings" },
-  { caption: "Parish Ministries" },
-  { caption: "Community Outreach" },
-  { caption: "Holy Week" },
-  { caption: "Parish Events" },
+  { caption: "The Holy Sacrifice of the Mass", image: "/assets/parish/altar-mass.jpg" },
+  { caption: "Gathered for Sunday Mass", image: "/assets/parish/sunday-mass.jpg" },
+  { caption: "Proclaiming the Word", image: "/assets/parish/lector.jpg" },
+  { caption: "Breaking open the Gospel", image: "/assets/parish/homily.jpg" },
+  { caption: "The Consecration", image: "/assets/parish/consecration.jpg" },
+  { caption: "Receiving Holy Communion", image: "/assets/parish/holy-communion.jpg" },
+  { caption: "Our parish rondalla", image: "/assets/parish/rondalla.jpg" },
+  { caption: "One family in prayer", image: "/assets/parish/congregation.jpg" },
+  { caption: "Fellowship after Mass", image: "/assets/parish/parish-lunch.jpg" },
+  { caption: "Celebrating together", image: "/assets/parish/parish-celebration.jpg" },
+  { caption: "Volunteers at work", image: "/assets/parish/volunteers.jpg" },
+  { caption: "In humble adoration", image: "/assets/parish/priest-kneeling.jpg" },
 ];
 
 // The seven sacraments. Baptism and Confession are flagged `main: true` and are
@@ -183,11 +187,13 @@ export const ministries = [
   },
   {
     name: "Worship Ministry",
+    image: "/assets/parish/consecration.jpg",
     blurb:
       "Help prepare reverent and meaningful liturgies. Assist in coordinating the celebration of the Mass and the sacraments so the whole community can worship as one.",
   },
   {
     name: "Music Ministry",
+    image: "/assets/parish/rondalla.jpg",
     blurb:
       "Lift hearts to God through song. Singers and instrumentalists are warmly invited to lead the congregation in praise during Masses and parish celebrations.",
   },
@@ -198,6 +204,7 @@ export const ministries = [
   },
   {
     name: "Eucharistic Minister of the Holy Communion",
+    image: "/assets/parish/holy-communion.jpg",
     blurb:
       "Bring the Body of Christ to the faithful, including the sick and homebound. A profound calling for those who wish to serve at the Lord's table.",
   },
@@ -208,21 +215,25 @@ export const ministries = [
   },
   {
     name: "Greeters and Collectors Ministry",
+    image: "/assets/parish/warm-welcome.jpg",
     blurb:
       "Be the welcoming face of our parish. Greet parishioners with a warm smile, help them feel at home, and assist during the offertory at Mass.",
   },
   {
     name: "Lectors and Commentators Ministry",
+    image: "/assets/parish/lector.jpg",
     blurb:
       "Proclaim the Word of God. If you are comfortable reading before the assembly, share the Scriptures and guide the congregation through the celebration of the Mass.",
   },
   {
     name: "Parish Youth Ministry",
+    image: "/assets/parish/young-musicians.jpg",
     blurb:
       "Calling all young people! Grow in faith, build lasting friendships, and serve the community through fellowship, formation, and fun parish activities.",
   },
   {
     name: "Social Service Ministry",
+    image: "/assets/parish/volunteers.jpg",
     blurb:
       "Be the hands of Christ to those in need. Reach out to the poor and marginalized through outreach, relief drives, and works of mercy in our community.",
   },
@@ -233,6 +244,7 @@ export const ministries = [
   },
   {
     name: "Formation Ministry",
+    image: "/assets/parish/preaching.jpg",
     blurb:
       "Deepen your faith and help others do the same. Assist in catechesis, seminars, and faith formation for parishioners of every age.",
   },
@@ -308,11 +320,13 @@ export const pillars = [
       {
         heading: "A Life of Prayer",
         imageLabel: "Photo: Eucharistic Adoration",
+        image: "/assets/parish/prayer-pews.jpg",
         text: "Through personal and communal prayer, devotions, and Eucharistic adoration, we encounter the living God and grow in our relationship with Him.",
       },
       {
         heading: "Handing On the Faith",
         imageLabel: "Photo: Catechism & faith formation",
+        image: "/assets/faith2.jpg",
         text: "We pass on the faith to the next generation through catechism, formation, and the witness of a community that strives to live the Gospel each day.",
       },
     ],
@@ -328,16 +342,19 @@ export const pillars = [
       {
         heading: "A Welcoming Community",
         imageLabel: "Photo: Parishioners after Sunday Mass",
+        image: "/assets/parish/warm-welcome.jpg",
         text: "Whether you have worshipped here for decades or are visiting for the first time, you are family. All are welcome at the Lord's table.",
       },
       {
         heading: "Journeying Together",
         imageLabel: "Photo: Parish fellowship & gatherings",
+        image: "/assets/parish/fellowship-table.jpg",
         text: "From baptisms to weddings, in joys and in sorrows, we walk beside one another — celebrating life's milestones and supporting each other in times of need.",
       },
       {
         heading: "Growing in Fellowship",
         imageLabel: "Photo: Ministries & parish events",
+        image: "/assets/parish/young-musicians.jpg",
         text: "Our many ministries and parish events bring people together, building lasting friendships rooted in faith and shared service.",
       },
     ],
@@ -353,16 +370,19 @@ export const pillars = [
       {
         heading: "Feeding the Hungry",
         imageLabel: "Photo: Parish feeding program",
+        image: "/assets/parish/sharing-food.jpg",
         text: "Our parish regularly goes out to feed the hungry and share what we have with those who have little. In serving them, we serve Christ Himself.",
       },
       {
         heading: "Caring for the Least",
         imageLabel: "Photo: Charity & relief drives",
+        image: "/assets/parish/serving-meals.jpg",
         text: "Through relief drives, medical missions, and outreach to the marginalized, we extend the compassion of God to the most vulnerable in our community.",
       },
       {
         heading: "A Call to Serve",
         imageLabel: "Photo: Volunteers in action",
+        image: "/assets/parish/volunteers.jpg",
         text: "Every parishioner is invited to take part in our works of mercy. Together, we become the hands and feet of Christ in the world.",
       },
     ],
